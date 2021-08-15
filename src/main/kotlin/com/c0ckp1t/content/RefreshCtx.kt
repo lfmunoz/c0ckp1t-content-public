@@ -38,6 +38,7 @@ open class RefreshCtx(
         utils: KotlinScriptUtils
 ) : ScriptCtx(utils) {
 
+    // !!##START_WORKFLOW ---------------------------------------------------------------------------
 
     @C0ckp1tMap
     suspend fun os(): Map<String, String> {
@@ -126,5 +127,7 @@ open class RefreshCtx(
     override fun main(): Flow<Any> = flow {
         stdield("[main]")
     }
+
+    // !!##END_WORKFLOW ---------------------------------------------------------------------------
 
 }
